@@ -1,0 +1,78 @@
+body[data-theme='theme1'] {
+    // Backgrounds
+    --main-background: #3a4764; // hsl(222, 26%, 31%);
+    --toggle-background: #232c43; // hsl(223, 31%, 20%), keypad background
+    --screen-background: #182034; // hsl(224, 36%, 15%)
+
+    // Keys
+    --key-delres-background: #637097; // hsl(225, 21%, 49%)
+    --key-delres-shadow: #404e72; // hsl(224, 28%, 35%)
+
+    --key-equals-background: #d03f2f; // hsl(6, 63%, 50%)
+    --key-equals-shadow: #93261a; // hsl(6, 70%, 34%)
+
+    --key-background: #eae3dc; // hsl(30, 25%, 89%)
+    --key-shadow: #b4a597; // hsl(28, 16%, 65%)
+    --key-hover: #fffffe;
+
+    //  Text
+    --keys: #434a59;
+    --display: #ffffff; // hsl(0, 0%, 100%)
+    --equals: #ffffff;
+}
+
+body[data-theme='theme2'] {
+    // Backgrounds
+    --main-background: #E6E6E6;
+    --toggle-background: #D2CDCD;
+    --screen-background: #EEEEEE;
+
+    // Keys
+    --key-delres-background: #62B5BC;
+    --key-delres-shadow: #1B6066;
+
+    --key-equals-background: #C85402;
+    --key-equals-shadow: #873901;
+
+    --key-background: #E5E4E1;
+    --key-shadow: #a79e91;
+    --key-hover: #FFFFFF;
+
+    //  Text
+    --keys: #36362C;
+    --display: #ffffff;
+    --equals: #ffffff;
+}
+
+body[data-theme='theme3'] {
+    // Backgrounds
+    --main-background: #17062A;
+    --toggle-background: #1e0936;
+    --screen-background: #1E0936;
+
+    // Keys
+    --key-delres-background: #8631AF;
+    --key-delres-shadow: #BE15F4;
+
+    --key-equals-background: #93FFF8;
+    --key-equals-shadow: #6CF9F1;
+
+    --key-background: #331c4d;
+    --key-shadow: #881C9E;
+    --key-hover: #6C34AC;
+
+    //  Text
+    --keys: #FFE53D;
+    --display: #FFE53D;
+    --equals: #1A2327;
+}
+
+@mixin media($_size) {
+    @media(max-width: $_size) {
+        @content
+    }
+}
+
+// breakpoins
+$desktop: 1440px;
+$phone: 375px;

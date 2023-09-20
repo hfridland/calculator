@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Calculator from "./components/Calculator";
 
 function App() {
+  let themeNum = 1
+
+  if (window.matchMedia) {
+    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+      // Dark
+      // document.body.setAttribute('data-theme', 'theme3');
+      themeNum = 3
+    } else {
+      themeNum = 2
+      // document.body.setAttribute('data-theme', 'theme2');
+    }
+  }
+  // } else {
+  //   document.body.setAttribute('data-theme', 'theme1');
+  // }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Calculator themeNum={themeNum} />
     </div>
   );
 }

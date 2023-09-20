@@ -1,0 +1,179 @@
+@import './scss/header';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+#root {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: League Spartan, sans-serif;
+  @include media($phone) {
+    align-items: flex-start;
+  }
+}
+
+.calc {
+  width: 540px;
+  height: 708px;
+  display: flex;
+  flex-direction: column;
+  @include media($phone) {
+    width: 375px;
+    height: 667px;
+    padding: 30px 24px;
+  }
+  &__header {
+    height: 44px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    &__logo {
+      color: var(--display);
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.533px;
+    }
+  }
+  &__editor {
+    padding: 40px 32px 36px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    background-color: var(--screen-background);
+    outline: none;
+    border: none;
+    color: var(--display);
+    font-size: 56px;
+    font-weight: 700;
+    letter-spacing: -0.933px;
+    text-align: right;
+    @include media($phone) {
+      padding: 29px 24px 22px;
+      font-size: 40px;
+    }
+  }
+  &__keyboard {
+    width: 540px;
+    height: 480px;
+    border-radius: 10px;
+    background-color: var(--toggle-background);
+    padding: 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 24px;
+    @include media($phone) {
+      width: 327px;
+      height: 420px;
+      padding: 24px;
+    }
+    &__num-key {
+      @extend %key;
+      background-color: var(--key-background);
+      box-shadow: 0px -4px 0px 0px var(--key-shadow) inset;
+      color: var(--keys);
+      font-size: 40px;
+      letter-spacing: -0.667px;
+      &:hover {
+        background-color: var(--key-hover);
+      }
+    }
+    &__delres-key {
+      @extend %key;
+      background-color: var(--key-delres-background);
+      box-shadow: 0px -4px 0px 0px var(--key-delres-shadow) inset;
+      color: var(--display);
+      font-size: 28px;
+      letter-spacing: -0.467px;
+    }
+    &__equal-key {
+      @extend %key;
+      background-color: var(--key-equals-background);
+      box-shadow: 0px -4px 0px 0px var(--key-equals-shadow) inset;
+      color: var(--equals);
+      font-size: 28px;
+      letter-spacing: -0.467px;
+      .cols2 {
+        grid-column: 1 / 3;
+      }
+    }
+  }
+}
+
+%key {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  user-select: none;
+  cursor: pointer;
+}
+
+.cols13 {
+  grid-column: 1 / 3;
+}
+
+.cols35 {
+  grid-column: 3 / 5;
+}
+
+.swich-theme {
+  width: 139px;
+  display: flex;
+  flex-direction: column;
+  &__up-row {
+    display: flex;
+    justify-content: flex-end;
+    &__steps {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+      color: var(--display);
+      color: #FFF;
+      font-size: 12px;
+      font-weight: 700;
+      width: 71px;
+    }
+  }
+  &__control {
+    color: var(--display);
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__outer {
+      width: 71px;
+      height: 26px;
+      border-radius: 13px;
+      background-color: var(--toggle-background);
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      &__slider {
+        background-color: var(--key-equals-background);
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
