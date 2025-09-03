@@ -46,6 +46,10 @@
       font-weight: 700;
       letter-spacing: -0.533px;
     }
+    &__about {
+      color: var(--display);
+      cursor: pointer;
+    }
   }
   &__editor {
     padding: 40px 32px 36px;
@@ -111,6 +115,23 @@
       }
     }
   }
+  &__about {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    padding: 5px;
+    background-color: var(--key-background);
+    color: var(--keys);
+    font-family: 'Courier New', Courier, monospace;
+    &__header {
+      text-align: center;
+    }
+    &__btn_close {
+      text-align: center;
+    }
+  }
 }
 
 %key {
@@ -143,7 +164,7 @@
       justify-content: space-between;
       padding: 0 10px;
       color: var(--display);
-      color: #FFF;
+      color: #fff;
       font-size: 12px;
       font-weight: 700;
       width: 71px;
@@ -151,7 +172,7 @@
   }
   &__control {
     color: var(--display);
-    color: #FFF;
+    color: #fff;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -176,4 +197,53 @@
       }
     }
   }
+}
+
+.ce_container {
+  padding: 20px 32px 20px;
+  border-radius: 10px;
+  background-color: var(--screen-background);
+  outline: none;
+  border: none;
+  color: var(--display);
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -0.933px;
+  text-align: right;
+  @include media($phone) {
+    padding: 29px 24px 22px;
+    font-size: 40px;
+  }
+  display: flex;
+  flex-direction: column;
+  &_input {
+    margin: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    &_operand {
+      width: 40%;
+      border: 1px solid black;
+      border-radius: 5px;
+      padding-right: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    &_operator {
+      width: 20%;
+      border: 1px solid black;
+      border-radius: 5px;
+      margin: 0 5px;
+      text-align: center;
+    }
+  }
+  &_output {
+    margin: 5px 10px;
+    border: 1px solid black;
+    text-align: center;
+  }
+}
+
+.selected {
+  border-width: 2px;
 }
