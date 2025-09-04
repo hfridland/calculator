@@ -1,4 +1,9 @@
-const About = ({ visible, handleClose }) => {
+interface AboutProps {
+  visible: boolean
+  handleClose: () => void
+}
+
+const About = ({ visible, handleClose }: AboutProps) => {
   const visStyle = {
     display: visible ? 'block' : 'none',
   }

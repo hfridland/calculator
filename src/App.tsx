@@ -1,10 +1,10 @@
-import Calculator from "./components/Calculator";
+import Calculator from './components/Calculator'
 
 function App() {
   let themeNum = 1
 
   if (window.matchMedia) {
-    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       // Dark
       // document.body.setAttribute('data-theme', 'theme3');
       themeNum = 3
@@ -20,7 +20,7 @@ function App() {
     <div className="app">
       <Calculator themeNum={themeNum} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

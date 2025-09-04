@@ -1,4 +1,11 @@
-const CalcEditor = ({ opDescr, result }) => {
+import { OpDescr } from './Calculator'
+
+interface CalcEditorProps {
+  opDescr: OpDescr
+  result: string
+}
+
+const CalcEditor = ({ opDescr, result }: CalcEditorProps) => {
   return (
     <div className="ce_container">
       <div className="ce_container_input">

@@ -13,8 +13,6 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -27,16 +25,21 @@ Users should be able to:
 - **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
 
 ### Screenshot
+
 #### Theme 1
+
 ![](./screenshots/theme1.png)
 
 #### Theme 2
+
 ![](./screenshots/theme2.png)
 
 #### Theme 3
+
 ![](./screenshots/theme3.png)
 
 #### Phone
+
 ![](./screenshots/phone.png)
 
 ### Links
@@ -52,6 +55,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
+- typescript
 - [React](https://reactjs.org/) - JS library
 
 ## Author
