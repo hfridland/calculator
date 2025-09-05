@@ -60,6 +60,6 @@ Users should be able to:
 
 ## Author
 
-- Website - [Haim Friland](mailto:hfridland@shaw.ca)
+- Website - [Haim Friland](mailto:hfridland@gmail.com)
 - Frontend Mentor - [@hfridland](https://www.frontendmentor.io/profile/hfridland)
 - LinkedIn - [Haim Fridland](https://www.linkedin.com/in/haim-fridland-a8b28315/)
